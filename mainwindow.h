@@ -73,5 +73,6 @@ private:
     struct CalcInfo operation;
 
     int get_result();
+    void reset_buffs();
 };
 #endif // MAINWINDOW_H

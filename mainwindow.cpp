@@ -96,8 +96,7 @@ void MainWindow::on_btn_nine_clicked()
 void MainWindow::on_btn_clear_clicked()
 {
     ui->text_output->clear();
-    this->buffer.clear();
-    this->out_text.clear();
+    reset_buffs();
 }
 
 
@@ -175,7 +174,7 @@ void MainWindow::on_btn_equal_clicked()
     }
 
     ui->text_output->setText(QString::number(get_result()));
-    this->out_text.clear();
+    reset_buffs();
 }
 
 int MainWindow::get_result() {
@@ -187,11 +186,15 @@ int MainWindow::get_result() {
     case Op_mul:
         return this->operation.op_one * this->operation.op_two;
     case Op_div:
-        if (operation.op_one == 0 || operation.op_two == 0)
-            return 0;
-        else
-            return this->operation.op_one / this->operation.op_two;
+        return (operation.op_one == 0 || operation.op_two == 0) ?
+                   0 : (this->operation.op_one / this->operation.op_two);
     }
 
     return 0;
+}
+
+void MainWindow::reset_buffs()
+{
+    this->out_text.clear();
+    this->buffer.clear();
 }

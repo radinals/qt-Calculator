@@ -24,7 +24,7 @@
   </property>
   <property name="font">
    <font>
-    <family>Source Code Pro</family>
+    <family>Noto Sans</family>
     <pointsize>12</pointsize>
    </font>
   </property>
@@ -38,7 +38,7 @@
       <x>60</x>
       <y>100</y>
       <width>281</width>
-      <height>136</height>
+      <height>140</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
@@ -131,7 +131,7 @@
      </rect>
     </property>
     <property name="readOnly">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="clearButtonEnabled">
      <bool>false</bool>
@@ -143,7 +143,7 @@
       <x>350</x>
       <y>40</y>
       <width>82</width>
-      <height>136</height>
+      <height>176</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -151,6 +151,13 @@
       <widget class="QPushButton" name="btn_div">
        <property name="text">
         <string>/</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_mul">
+       <property name="text">
+        <string>*</string>
        </property>
       </widget>
      </item>
@@ -169,26 +176,13 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="btn_mul">
+      <widget class="QPushButton" name="btn_equal">
        <property name="text">
-        <string>X</string>
+        <string>=</string>
        </property>
       </widget>
      </item>
     </layout>
-   </widget>
-   <widget class="QPushButton" name="btn_equal">
-    <property name="geometry">
-     <rect>
-      <x>350</x>
-      <y>180</y>
-      <width>80</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>=</string>
-    </property>
    </widget>
   </widget>
  </widget>
